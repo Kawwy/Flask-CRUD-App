@@ -50,6 +50,7 @@
                     <th>Date</th>
                     <th>Amount</th>
                     <th>Actions</th>
+                    <th><a class="btn btn-sm btn-success" href="{{ url_for('total_function') }}">Add</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -63,11 +64,19 @@
                     </td>
                 </tr>
                 {% endfor %}
+                <tr>
+                    <td><b>Total Amount</b></td>
+                    <td>{{ total }}</td>
+                </tr>
             </tbody>
         </table>
 
         <div class="d-flex justify-content-center">
+            <a class="btn btn-info" href="{{ url_for('search_transactions') }}">Search</a>
+            &emsp;
             <a class="btn btn-success" href="{{ url_for('add_transaction') }}">Add Transaction</a>
+            &emsp;
+            <a class="btn btn-info" href="{{ url_for('get_transactions') }}">Go Home</a>
         </div>
     </div>
 </body>

@@ -53,8 +53,9 @@
                 <label for="max_amount">Maximum Amount:</label>
                 <input type="number" class="form-control" id="max_amount" name="max_amount" step="0.01" required>
             </div>
-            <div class="form-actions">
+            <div class="form-footer">
                 <button type="submit" class="btn btn-primary">Search</button>
+                <a class="btn btn-info" href="{{ url_for('get_transactions') }}">Go Back</a>
             </div>
         </form>
     </div>
